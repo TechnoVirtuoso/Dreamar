@@ -1,0 +1,161 @@
+.product-details{
+    padding: 0 20px;
+    .product-details-container{
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 80px 24px;
+        display: flex;
+        justify-content: space-between;
+        @include responsive(sm){
+            flex-direction: column;
+            padding: 80px 0px;
+        }
+        .left-col{
+            width: 25%;
+            @include responsive(md){
+                width: 30%;
+            }
+            @include responsive(sm){
+                width: 100%;
+            }
+            .data-sheet{
+                margin-bottom: 25px;
+                h4{
+                    font-size: 20px;
+                    font-weight: lighter;
+                    line-height: 100%;
+                    margin-bottom: 15px;
+                }
+                button{
+                    width: 100%;
+                    padding: 15px;
+                    border: none;
+                    background: $black;
+                    color: $white;
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 100%;
+                    cursor: pointer;
+                }
+            }
+            .catalogs{
+                margin-bottom: 40px;
+                h4{
+                    font-size: 20px;
+                    font-weight: lighter;
+                    line-height: 100%;
+                    margin-bottom: 15px;
+                }
+                a{
+                    display: block;
+                    padding: 15px;
+                    border: 1px solid $black;
+                    background: $white;
+                    color: $black;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 100%;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        background: $black;
+                        color: $white;
+                    }
+                }
+            }
+            .product-image{
+                height: 23vw;
+                @include responsive(md){
+                    height: 28vw;
+                }
+                @include responsive(sm){
+                    display: none;
+                }
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .right-col{
+            width: 65%;
+            @include responsive(md){
+                width: 60%;
+            }
+            @include responsive(sm){
+                width: 100%;
+            }
+            .faq{
+                margin-top:40px;
+                margin-bottom: 25px;
+                &:first-child{
+                    margin-top:0;
+                }
+                .title{
+                    font-size: 12px;
+                    font-weight: 500;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                    border-bottom: 1px solid $black;
+                    position: relative;
+                    cursor: pointer;
+                    @include responsive(sm){
+                        padding-bottom: 15px;
+                    }
+                    &.active{
+                        &::before{
+                            opacity: 0;
+                        }
+                        &::after{
+                            opacity: 1;
+                        }
+                    }
+                    .plus-minus{
+                        position:absolute;
+                        right:10px;
+                        .minus{
+                            display:none
+                        }
+                        svg{
+                            width:10px;
+                            height:10px;
+                            display:block;
+                        }
+                    }
+                }
+                &.active{
+                    .title{
+                        .plus-minus{
+                            .minus{
+                                display:block;
+                            }
+                            .plus{
+                                display:none;
+                            }
+                        }
+                    }
+                }
+                .subtext{
+                    display: none;
+                    font-size: 12px;
+                    line-height: 120%;
+                    p{
+                        font-weight: 200;
+                        a{
+                            text-decoration: underline;
+                            color: $black;
+                            font-weight: 200;
+                        }
+                        strong{
+                            font-weight: 500;
+                        }
+                    }
+                    &.active{
+                    }
+                }
+            }
+        }
+    }
+}

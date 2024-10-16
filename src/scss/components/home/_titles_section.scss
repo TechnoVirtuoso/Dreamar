@@ -1,0 +1,41 @@
+.titles_section {
+    padding: 1.875rem 20px;
+    max-width: 90rem;
+    margin: 0 auto;
+
+    .slider {
+        .slick-slide {
+            margin: 0 20px;
+        }
+
+        .slide-item {
+            font-family: $font;
+
+            .poster {
+                padding: 110px 3.5rem;
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    color: white;
+
+                    .title {
+                        font-size: 2.25rem;
+                        font-weight: 400;
+
+                        @media (max-width: 1280px) {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    a {
+                        color: white;
+                        font-size: .875rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

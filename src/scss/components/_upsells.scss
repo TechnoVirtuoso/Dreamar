@@ -1,0 +1,99 @@
+.upsell-products{
+    padding: 0 20px;
+    background: $secondaryblack;
+    .upsells-product-container{
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 50px 24px;
+        h2{
+            font-size: 36px;
+            line-height: 120%;
+            font-weight: 300;
+            margin-bottom: 25px;
+            color: $white;
+        }
+        p{
+            font-size: 16px;
+            line-height: 120%;
+            font-weight: 300;
+            margin-bottom: 30px;
+            color: $white;
+        }
+        .up{
+            display: flex;
+            grid-column-gap: 45px;
+            max-width: 1440px;
+            overflow-x: auto;
+            overflow-y: none;
+            @include responsive(md){
+                grid-column-gap: 25px;
+            }
+            &::-webkit-scrollbar-track
+            {
+                background-color: #555555;
+                cursor: grab;
+            }
+
+            &::-webkit-scrollbar
+            {
+                border-radius: 6px;
+                height: 4px !important;
+                background-color: #555555;
+                cursor: grab;
+            }
+
+            &::-webkit-scrollbar-thumb
+            {
+                background-color: $white;
+                border: 1px solid #555555;
+                cursor: grab;
+            }
+            .u-prods{    
+                flex: 0 0 22%;
+                height: 520px;
+                @include responsive(lg){
+                    flex: 0 0 35%;
+                }
+                @include responsive(md){
+                    flex: 0 0 45%;
+                }
+                @include responsive(sm){
+                    flex: 0 0 75%;
+                    height: 550px;
+                }
+                @include responsive(xs){
+                    flex: 0 0 90%;
+                    height: 400px;
+                }
+                .u-prods-container{
+                    height: 100%;
+                    a{
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .u-fi-container{
+                            height: inherit;
+                            img{   
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        .u-content{
+                            padding-top: 20px;
+                            .u-name{
+                                font-size: 12px;
+                                line-height: 120%;
+                                margin-bottom: 10px;
+                            }
+                            .u-price{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

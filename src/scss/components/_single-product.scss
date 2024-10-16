@@ -1,0 +1,130 @@
+.woocommerce{
+    #primary{
+        #main{
+            position: relative;
+            .woocommerce-breadcrumb{
+                @include responsive(sm){
+                    display: none !important;
+                }
+                position: absolute;
+                top: 45px;
+                z-index: 9;
+                left: 50px;
+                font-size: 24px;
+                color: $white;
+                font-family: $font;
+                font-weight: 500;
+                a{
+                    font-size: 12px;
+                    color: $white !important;
+                }
+            }
+            .banner{
+                cursor: none; 
+                position: relative;
+                height: calc(100vh - 151px);
+                @include responsive(md){
+                    height: calc(100vh - 68px);
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .banner-container{
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    inset: 0;
+                    .banner-inner{
+                        max-width: 1400px;
+                        margin: 0 auto;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: end;
+                        padding: 0 65px 50px;
+                        position: relative;
+                        @include responsive(sm){
+                            justify-content: space-between;
+                            padding: 40px 20px;
+                        }
+                        .woocommerce-breadcrumb{
+                            display: block;
+                        }
+                        h1{
+                            font-size: 80px;
+                            line-height: 120%;
+                            font-weight: 300;
+                            color: $white;
+                            font-family: $font;    
+                            margin-bottom: 25vh;
+                            width: 70%;
+                            transition: transform 0.1s ease;
+                            @include responsive(md){
+                                font-size: 36px;
+                                line-height: 120%;
+                                
+                            }
+                        }
+                        .banner-links{
+                            position: relative;
+                            z-index: 50;
+                            @include responsive(sm){
+                                display: flex;
+                                flex-direction: column-reverse;
+                            }
+                            .pb{
+                                padding-bottom: 30px;
+                                @include responsive(sm){
+                                    padding-bottom: 0px;
+                                    margin-top: 50px;
+                                }
+                                p{
+                                    font-size: 20px;
+                                    color: $white;
+                                    font-family: $font;
+                                    @include responsive(sm){
+                                        font-size: 14px;
+                                        font-weight: 700;
+                                    }
+                                }
+                            }
+                            .ban-link{
+                                display: flex;
+                                grid-gap: 20px;
+                                .ban-sl{
+                                    padding-top: 20px;
+                                    border-top: 2px solid $white;
+                                    @include responsive(sm){
+                                        &:first-child{
+                                            display: none;
+                                        }
+                                        padding-top: 10px;
+                                    }
+                                    a{
+                                        color: $white;
+                                        font-size: 16px;
+                                        font-family: $font;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.woocommerce-product-gallery{
+    // display: none;
+}
+.woocommerce-breadcrumb{
+    display: none;
+}
+.p-full-img-container{
+    display: flex;
+    img{
+        height: 100%;
+    }
+}

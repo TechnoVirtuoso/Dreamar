@@ -1,0 +1,41 @@
+.product-description{
+    padding: 0 20px;
+    .product-description-container{
+        max-width: 1400px;
+        margin: 0 auto;
+        padding:35px 24px;
+        @include responsive(md){
+            padding: 20px 5px;
+        }
+        .title{
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 120%;
+            font-family: $font;
+            margin-bottom: 20px;
+        }
+        .py-4{
+            padding: 0 !important;
+            margin-bottom: 40px;
+            strong{
+                font-weight: 500;
+            }
+        }
+       
+        .container-fluid{
+            max-width: 50%;
+            width: 100%;
+            font-size: 12px;
+            line-height: 1.5;
+            font-family: $font;
+            margin-bottom:70px;
+            @include responsive(md){
+                width: 100%;
+                max-width: none;
+            }
+            &:last-child{
+                margin-bottom:0px;
+            }
+        }
+    }
+}

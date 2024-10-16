@@ -1,0 +1,167 @@
+.product_carousel_half {
+    @media (max-width: 768px) {
+        height: 135vh;
+    }
+
+    &-wrapper {
+        min-height: 100vh;
+        max-height: 760px;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+
+            .main {
+                height: 620px;
+            }
+        }
+
+        .main {
+            width: 100%;
+        }
+
+        .half-slider {
+            padding: 3.125rem 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 3.125rem;
+
+            .slider-header {
+                margin: 0 auto;
+                max-width: 25rem;
+
+                font-family: $font;
+
+                .heading {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    color: $black;
+                }
+
+                .sub_heading {
+                    margin-top: 0.625rem;
+                    font-size: .875rem;
+                    font-weight: 300;
+                    color: $gray;
+                }
+            }
+
+            .product_carousel_half_slider-wrapper {
+                overflow: hidden;
+                width: 100%;
+                position: relative;
+                padding: 0 20px;
+
+                .slider {
+                    max-width: 800px;
+                    width: 100%;
+                    position: relative;
+
+                    .slick-prev {
+                        left: -20px;
+                        top: 35%;
+                        background: white;
+                        width: 20%;
+                        height: 70%;
+                        z-index: 10;
+                        opacity: .9;
+                    }
+
+                    .slick-next {
+                        right: -25px;
+                        top: 35%;
+                        background: white;
+                        width: 20%;
+                        height: 70%;
+                        z-index: 10;
+                        opacity: .9;
+                    }
+
+                    .slide-item.slick-slide.slick-active {
+                        opacity: .2;
+                    }
+
+                    .slide-item.slick-slide.slick-current.slick-active.slick-center {
+                        opacity: 1 !important;
+                    }
+
+                    .slide-item {
+                        width: 400px;
+                        height: 400px !important;
+                        transition: transform .4s;
+                        transition: opacity .4s;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 30px;
+
+                        img {
+                            width: 150px;
+                        }
+
+                        .info {
+                            font-family: $font;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 4px;
+
+                            .name {
+                                font-weight: 500;
+                                font-size: 1rem;
+                            }
+
+                            .price {
+                                font-weight: 500;
+                                margin-top: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .numbered-pagination {
+                margin: 0 auto;
+                max-width: 25rem;
+                width: 100%;
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                margin-top: -100px;
+
+                .numbering {
+                    font-family: $font;
+                    font-size: .625rem;
+                    display: flex;
+                    font-weight: 500;
+                }
+
+                .progress-bar {
+                    flex: 1;
+                    height: 3px;
+                    background: #999999;
+
+                    .inner-progress {
+                        background: black;
+                        height: 3px;
+                        transition: all 0s linear;
+                        display: block;
+
+                        &.active {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .slider-button {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}

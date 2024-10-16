@@ -1,0 +1,274 @@
+footer{
+    padding: 0 20px;
+    position: relative;
+    background: $white;
+    margin-top:30px;
+    .news-letter{
+        position: fixed;
+        bottom: 5%;
+        right: 0;
+        border-radius: 6px;
+        background: $secondaryblack;
+        padding: 10px 20px;
+        cursor: pointer;
+        p{
+
+        }
+    }
+    .footer-container{
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 70px 24px;
+        display: flex;
+        justify-content: space-between;
+        @include responsive(md){
+            flex-direction: column;
+        }
+        .footer-logo{
+            flex: 0 0 20%;
+        
+            img{
+                width: 200px;
+            }
+        }
+        .footer-links{
+            display: flex;
+            justify-content: space-between;
+            flex: 0 0 40%;
+            @include responsive(md){
+                flex-direction: column;
+                margin: 25px 0;
+            }
+            .address{  
+                    width: 30%; 
+                    @include responsive(md){
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                p{
+                    font-family: $font;
+                    font-size: 12px;
+                    line-height: 120%;
+                    color: $black;
+                    font-weight: 400;
+                }
+            }
+            .c-links{
+                width: 35%;
+                @include responsive(md){
+                    width: 100%;
+                }
+                p{
+                    font-family: $font;
+                    font-size: 12px;
+                    line-height: 100%;
+                    font-weight: 400;
+                    margin-bottom: 10px;
+                }
+                .c-links-container{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    a{
+                        width: max-content;
+                        font-family: $font;
+                        font-size: 12px;
+                        line-height: 100%;
+                        margin-bottom: 10px;
+                        padding-left: 5px;
+                        font-weight: 400;
+                        color: $white;
+                    }
+                }
+            }
+            .l-links{
+                width: 30%;
+                p{
+                    font-family: $font;
+                    font-size: 12px;
+                    line-height: 100%;
+                    font-weight: 400;
+                    margin-bottom: 10px;
+                }
+                .l-links-container{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    a{
+                        width: max-content;
+                        font-family: $font;
+                        font-size: 12px;
+                        line-height: 100%;
+                        margin-bottom: 10px;
+                        padding-left: 5px;
+                        font-weight: 400;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .socials{
+            flex: 0 0 25%;
+            .socials-container{
+                padding-top: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                flex-wrap: wrap;
+                @include responsive(md){
+                    justify-content: start;
+                }
+                a{
+                    margin-right: 15px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+.nl-popup{
+    color: $white;
+}
+.newsletter{
+    padding: 0 20px;
+    background: $black;
+    display: none;
+    .newsletter-container{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 0 20px;
+        h2{
+            font-size: 36px;
+            line-height: 120%;
+            font-weight: 100;
+            color: $white;
+        }
+        .nl-popup{
+            margin: 30px 0 80px;
+            font-size: 36px;
+            line-height: 120%;
+            font-weight: 400;
+            cursor: pointer;
+            width: max-content;
+            color: $white;
+        }
+    }
+}
+.newsletter-popup{
+    position: fixed;
+    background: $black;
+    z-index: 990;
+    width: 100%;
+    height: 80%;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    &.active{
+        opacity: 1;
+        pointer-events: all;
+    }
+    .nl-popup-container{
+        padding: 0 20px;
+        height: 100%;
+        position: relative;
+        .popup-close{
+            position: absolute;
+            font-size: 25px;
+            font-weight: 400;
+            font-family: $font;
+            left: 100px;
+            top: 40px;
+            cursor: pointer;
+            color: $white;
+        }
+        .nl-popup-inner{
+            max-width: 1000px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2{
+                font-size: 36px;
+                line-height: 120%;
+                width: 85%;
+                font-weight: 100;
+                margin-bottom: 40px;
+                color: $white;
+            }
+            #gform_wrapper_1{
+                width: 85%;
+                .gform_heading{
+                    display: none;
+                }
+                form{
+                    .gform_body{
+                        #gform_fields_1{
+                            .gfield{
+                                width: 350px;
+                                margin-bottom: 40px;
+                                label{
+                                    font-family: $font;
+                                    font-size: 14px;
+                                    line-height: 120%;
+                                    color: $white;
+                                }
+                                .ginput_container{
+                                    input{
+                                        background: transparent;
+                                        border-left: none;
+                                        border-top: none;
+                                        border-right: none;
+                                        border-bottom: 1px solid $white;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                            #field_1_5{
+                                width: 100%;
+                                .ginput_container{
+                                    input[type=checkbox]{
+                                        margin-right: 10px;
+                                        background: transparent;
+                                        position: relative;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .gform_footer{
+                        display: flex;
+                        justify-content: end;
+                        position: relative;
+                        &::before{
+                            content: "By clicking on the submit button, you agree that the details you provide will be used to action your request.";
+                            position: absolute;
+                            width: 200px;
+                            right: 0;
+                            font-size: 12px;
+                            line-height: 120%;
+                            bottom: -40px;
+                            font-family: $font;
+                            color: $white;
+                        }
+                        input{
+                            background: $white;
+                            border-radius: none;
+                            width: 200px;
+                            color: $black;
+                            text-transform: uppercase;
+                            font-family: $font;
+                            font-size: 12px;
+                            padding: 15px 20px;
+                            position: relative;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.contact-links{
+    padding: 0 20px;
+    background: $secondaryblack;
+    .contact-links-container{
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 50px 65px;
+        @include responsive(lg){
+            padding: 50px 20px;
+        }
+        @include responsive(sm){
+            padding: 50px 0;
+        }
+        h2{
+            font-size: 20px;
+            line-height: 100%;
+            font-weight: 300;
+            color: $white;
+        }
+        .contact-links-inner{
+            display: flex;
+            justify-content: space-between;
+            @include responsive(sm){
+                flex-direction: column;
+            }
+            .link{
+                padding-top: 40px;
+                width: calc(15% - 30px);
+                @include responsive(md){
+                    width: calc(20% - 30px);
+                }
+                @include responsive(sm){
+                    width: 100%;
+                }
+                a{
+                    .icon{
+                        img{
+                            filter: invert(1);
+                        }
+                    }
+                    .link-title{
+                        margin-top: 15px;
+                        margin-bottom: 15px;
+                        p{
+                            color: $white;
+                            font-weight: 400;
+                            font-size: 14px;
+                        }
+                    }
+                    .link-subtext{
+                        p{
+                            color: $white;
+                            font-weight: lighter;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

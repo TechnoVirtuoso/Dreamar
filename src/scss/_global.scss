@@ -1,0 +1,45 @@
+
+* {
+    outline:none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  sup, sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+  }
+  sub { 
+    top: 0.4em; 
+  }
+
+html, body { 
+    margin:0;
+    padding:0;
+  scroll-behavior: smooth;
+    
+  
+}
+body {
+    position:relative;
+    
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+*,:after,:before{
+  box-sizing:border-box;
+}
+
+p,a,
+h1,h2,h3,h4,h5,h6{
+  font-family: $font;
+}
+
+a{
+  text-decoration: none;
+  color: $black;
+}

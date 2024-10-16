@@ -1,0 +1,61 @@
+.compare{
+    padding: 0 20px;
+    .compare-container{
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 40px 50px 100px;
+        @media screen and (max-width: 639px) {
+            padding: 40px 0px 40px;
+        }
+        h4{
+            font-size: 24px;
+            line-height: 120%;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+        .cmp-products{
+            display: flex;
+            .cmp-single-prod{
+                flex: 0 0 30%;
+                margin-right: 100px;
+                @include responsive(md){
+                    margin-right: 0;
+                }
+                .img{
+                    height: 400px;
+                    width: 400px;
+                    @include responsive(md){
+                        width: 35vw;
+                        height: 35vw;
+                    }
+                    @include responsive(sm){
+                        height: 28vw;
+                        width: 28vw;
+                    }
+                    @media screen and (max-width: 639px) {
+                        height: 80vw;
+                        width: auto;
+                    }
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .details{
+                    font-size: 12px;
+                    line-height: 120%;
+                    padding-top: 10px;
+                    .name{
+                        font-family: $font;
+                    }
+                    .price{
+                        margin-top: 15px;
+                        font-weight: 600;
+                        font-family: $font;
+                    }
+                }
+            }
+        }
+    }
+}

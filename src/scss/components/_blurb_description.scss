@@ -1,0 +1,80 @@
+.blurb-description{
+    padding: 0 20px;
+    .blurb-description-container{
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 65px 0 80px;
+        .heading{
+            margin-bottom: 25px;
+            text-align: center;
+            h4{
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 130%;
+            }
+        }
+        .subheading{
+            text-align: center;
+            p{
+                font-size: 20px;
+            }
+        }
+        .blurbs{
+            margin-top: 55px;
+            padding: 0 65px;
+            @include responsive(sm){
+                padding: 0;
+            }
+            .single-blurb{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                @include responsive(sm){
+                    flex-direction: column;
+                }
+                &:nth-child(2){
+                    margin-top: 55px;
+                    flex-direction: row-reverse;
+                    @include responsive(sm){
+                        flex-direction: column;
+                    }
+                    .text{
+                        width: 50%;
+                        padding-right: 20px;
+                        @include responsive(sm){
+                            width: 100%;
+                            padding-right: 0px;
+                        }
+                    }
+                    .image{
+                        width: 40%;
+                        @include responsive(sm){
+                            width: 100%;
+                        }
+                    }
+                }
+                .image{
+                    width: 50%;
+                    @include responsive(sm){
+                        width: 100%;
+                        margin-bottom: 30px;
+                    }
+                    img{
+                        @include responsive(sm){
+                            width: 100%;
+                        }
+                    }
+                }
+                .text{
+                    width: 40%;
+                    font-size: 16px;
+                    line-height: 170%;
+                    font-weight: 300;
+                    @include responsive(sm){
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
